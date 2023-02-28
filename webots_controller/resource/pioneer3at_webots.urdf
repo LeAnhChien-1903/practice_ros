@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<robot name="pioneer3at">
+    <webots>
+        <plugin type="webots_controller.controller.WebotsController" />
+    </webots>
+
+</robot>

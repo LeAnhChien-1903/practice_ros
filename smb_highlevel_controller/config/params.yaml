@@ -1,0 +1,5 @@
+/minimal_subscriber:
+  ros__parameters:
+    laser_scan:
+      topic_name: "/scan"
+      queue_size: 10
