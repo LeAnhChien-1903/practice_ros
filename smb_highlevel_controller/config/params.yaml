@@ -3,3 +3,8 @@
     laser_scan:
       topic_name: "/scan"
       queue_size: 10
+/p_controller:
+  ros__parameters:
+    controller:
+      gain: 10
+      deltaT: 0.016

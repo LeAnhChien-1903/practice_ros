@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'minimal_subscriber = smb_highlevel_controller.minimal_subscriber:main'
+            'minimal_subscriber = smb_highlevel_controller.minimal_subscriber:main',
+            'p_controller = smb_highlevel_controller.p_controller:main'
         ],
     },
 )

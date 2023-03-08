@@ -5,6 +5,7 @@ data_files = []
 data_files.append(('share/ament_index/resource_index/packages', ['resource/' + package_name]))
 data_files.append(('share/' + package_name + '/launch', ['launch/webots_controller.launch.py']))
 data_files.append(('share/' + package_name + '/worlds', ['worlds/pioneer3at_world.wbt']))
+data_files.append(('share/' + package_name + '/worlds', ['worlds/singlePillarWorld.wbt']))
 data_files.append(('share/' + package_name + '/resource', ['resource/pioneer3at_webots.urdf']))
 data_files.append(('share/' + package_name + '/models', ['models/pioneer3at.urdf']))
 data_files.append(('share/' + package_name + '/rviz', ['rviz/urdf_config.rviz']))

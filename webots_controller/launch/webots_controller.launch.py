@@ -16,7 +16,7 @@ def generate_launch_description():
     robot_description = pathlib.Path(os.path.join(package_dir,'resource', 'pioneer3at_webots.urdf')).read_text()
 
     webots = WebotsLauncher(world = os.path.join(package_dir, 'worlds', 'pioneer3at_world.wbt'))
-
+    webots2 = WebotsLauncher(world = os.path.join(package_dir, 'worlds', 'singlePillarWorld.wbt'))
     ros2_supervisor = Ros2SupervisorLauncher()
 
     default_model_path = os.path.join(package_dir, "models", "pioneer3at.urdf")
@@ -98,12 +98,12 @@ def generate_launch_description():
     )
     launch_cmd = launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
-            target_action=webots,
+            target_action=webots2,
             on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())],
             )
         )
     ld = LaunchDescription()
-    ld.add_action(webots)
+    ld.add_action(webots2)
     ld.add_action(controller)
     ld.add_action(ros2_supervisor)
     ld.add_action(launch_cmd)

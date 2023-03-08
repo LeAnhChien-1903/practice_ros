@@ -9,8 +9,8 @@ def generate_launch_description():
         
     node=Node(
         package = 'smb_highlevel_controller',
-        name = 'minimal_subscriber',
-        executable = 'minimal_subscriber',
+        name = 'p_controller',
+        executable = 'p_controller',
         output='screen',
         parameters= [param]
     )

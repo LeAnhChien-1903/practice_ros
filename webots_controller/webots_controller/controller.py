@@ -151,6 +151,8 @@ class WebotsController():
         self.__prevMotor4Position = currMotor4Position
 
     def step(self):
+        rclpy.spin_once(self.__node, timeout_sec=0)
+
         linear_vel = self.__targetTwist.linear.x
         angular_vel = self.__targetTwist.angular.z
 
